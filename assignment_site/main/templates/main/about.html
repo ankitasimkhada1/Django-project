@@ -1,0 +1,45 @@
+{% load static %}
+
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'main/static/main/style.css' %}">
+</head>
+<body>
+    <h1>About Page</h1>
+    <p>Name: {{ name }}</p>
+    <p>Role: {{ role }}</p>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About | Shanker Dev Campus</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <h1>About Our Courses</h1>
+    <p>Explore the programs offered at Shanker Dev Campus:</p>
+    <nav>
+        <a href="/">Home</a> | <a href="/about/">About</a>
+    </nav>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Fee per Semester</th>
+            <th>Seats</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course.name }}</td>
+            <td>{{ course.fee }}</td>
+            <td>{{ course.seats }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+
+
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <a href="{% url 'about' %}">About</a>
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | Shanker Dev Campus</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <h1>Welcome to Shanker Dev Campus</h1>
+    <p>We provide quality education in Management and IT fields.</p>
+    <nav>
+        <a href="/">Home</a> | <a href="/about/">About</a>
+    </nav>
+</body>
+</html>
